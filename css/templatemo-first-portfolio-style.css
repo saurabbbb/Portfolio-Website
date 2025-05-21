@@ -1185,4 +1185,54 @@ strong {
     min-width: inherit;
   }
 }
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+  margin-bottom: 50px; /* Space between sections */
+}
 
+.projects-gallery {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  overflow: hidden;
+  /* Add styles for your carousel/gallery */
+}
+
+.projects-thumb {
+  margin-bottom: 50px; /* Space between sections */
+  width: 100%;
+  text-align: center;
+}
+
+.projects-image {
+  max-width: 100%;
+  height: auto;
+}
+.projects-image {
+    border-radius: var(--border-radius-medium);
+    display: block;
+    width: 100%;
+    height: auto; /* Ensure the height adjusts automatically */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    transform: rotate(0); /* Remove rotation for better viewability */
+    transition: all ease 0.5s;
+}
+.custom-next-btn {
+    background-color: #535da1; /* Match the theme color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.custom-next-btn:hover {
+    background-color: #414a8c; /* Slightly darker shade on hover */
+}
