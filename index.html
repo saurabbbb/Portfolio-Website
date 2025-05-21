@@ -319,65 +319,74 @@ https://templatemo.com/tm-578-first-portfolio
                 </div>
             </section>
 
+            
             <section class="projects section-padding" id="section_4">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-md-8 col-12 ms-auto">
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <img src="images/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid" alt="">
-
-                                <h2 class="text-white ms-4 mb-0">Projects</h2>
-                            </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="projects-thumb">
-                                <div class="projects-info">
-                                    <small class="projects-tag">First Game</small>
-
-                                    <h3 class="projects-title">Snake Game</h3>
-                                </div>
-
-                                <a href="images/projects/first game.png" class="popup-image">
-                                    <img src="images/projects/first game.png" class="projects-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="projects-thumb">
-                                <div class="projects-info">
-                                    <small class="projects-tag">Photography</small>
-
-                                    <h3 class="projects-title">Eyes</h3>
-                                </div>
-
-                                <a href="images/projects/eyes.jpg" class="popup-image">
-                                    <img src="images/projects/eyes.jpg" class="projects-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="projects-thumb">
-                                <div class="projects-info">
-                                    <small class="projects-tag">Website</small>
-
-                                    <h3 class="projects-title">Website</h3>
-                                </div>
-
-                                <a href="images/projects/wbesiteeee.png" class="popup-image">
-                                    <img src="images/projects/wbesiteeee.png" class="projects-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                    <img src="images/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid" alt="">
+                    <h2 class="text-white ms-4 mb-0">Projects</h2>
                 </div>
-            </section>
+            </div>
+            <div class="clearfix"></div>
+
+            <!-- Game Section -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="projects-thumb">
+                    <div class="projects-info">
+                        <small class="projects-tag">Beginner Games</small>
+                        <h3 class="projects-title">Game</h3>
+                    </div>
+                    <img id="game-gallery" src="images/projects/game.gif" class="projects-image img-fluid" alt="Retro Dodge">
+                    <button class="custom-next-btn" onclick="nextGameImage()">Next</button>
+                </div>
+            </div>
+
+            <!-- Photography Section -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="projects-thumb">
+                    <div class="projects-info">
+                        <small class="projects-tag">Photography</small>
+                        <h3 class="projects-title">Gallery</h3>
+                    </div>
+                    <img id="photo-gallery" src="images/projects/eyes.jpg" class="projects-image img-fluid" alt="Photography">
+                    <button class="custom-next-btn" onclick="nextPhotoImage()">Next</button>
+                </div>
+            </div>
+
+            <!-- Website Section -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="projects-thumb">
+                    <div class="projects-info">
+                        <small class="projects-tag">Website</small>
+                        <h3 class="projects-title">Website</h3>
+                    </div>
+                    <img id="website-gallery" src="images/projects/websiteeee.png" class="projects-image img-fluid" alt="">
+                    <button class="custom-next-btn" onclick="nextWebsiteImage()">Next</button>
+                </div>
+            </div>
+
+        
+
+<!-- Certification Section -->
+<div class="col-lg-6 col-md-6 col-12">
+    <div class="projects-thumb">
+        <div class="projects-info">
+            <small class="projects-tag">Certificate Images</small>
+            <h3 class="projects-title">Certification Images</h3>
+        </div>
+        <img id="certificate-gallery" src="images/projects/certificate1.png" class="projects-image img-fluid" alt="Certification Image">
+        <button class="custom-next-btn" onclick="nextCertificateImage()">Next</button>
+    </div>
+</div>
+
+
+
+
+        </div>
+    </div>
+</section>
 
             <section class="contact section-padding" id="section_5">
                     <div class="container">
@@ -547,6 +556,59 @@ https://templatemo.com/tm-578-first-portfolio
         </footer>
 
         <!-- JAVASCRIPT FILES -->
+    
+        
+<script>
+    const gameImages = [
+        "images/projects/game.gif",
+        "images/projects/game2.gif"
+    ];
+    let currentGameIndex = 0;
+
+    function nextGameImage() {
+        currentGameIndex = (currentGameIndex + 1) % gameImages.length;
+        document.getElementById('game-gallery').src = gameImages[currentGameIndex];
+    }
+
+    const photoImages = [
+        "images/projects/eyes.jpg",
+        "images/projects/photography1.jpg",
+        "images/projects/photography2.jpg",
+        "images/projects/photography3.jpg",// Add more images as needed
+    ];
+    let currentPhotoIndex = 0;
+
+    function nextPhotoImage() {
+        currentPhotoIndex = (currentPhotoIndex + 1) % photoImages.length;
+        document.getElementById('photo-gallery').src = photoImages[currentPhotoIndex];
+    }
+
+    const websiteImages = [
+        "images/projects/websiteeee.png",
+        "images/projects/websiteeee2.png", // Add more images as needed
+    ];
+    let currentWebsiteIndex = 0;
+
+    function nextWebsiteImage() {
+        currentWebsiteIndex = (currentWebsiteIndex + 1) % websiteImages.length;
+        document.getElementById('website-gallery').src = websiteImages[currentWebsiteIndex];
+    }
+
+    
+
+    const certificateImages = [
+        "images/projects/certificate1.png",
+        "images/projects/certificate2.png" // Add more images as needed
+    ];
+    let currentCertificateIndex = 0;
+
+    function nextCertificateImage() {
+        currentCertificateIndex = (currentCertificateIndex + 1) % certificateImages.length;
+        document.getElementById('certificate-gallery').src = certificateImages[currentCertificateIndex];
+    }
+</script>
+
+
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
